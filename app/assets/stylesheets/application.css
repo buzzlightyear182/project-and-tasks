@@ -21,18 +21,31 @@ body {
   max-width: 1200px;
   width: 80%;
   margin: auto;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 h1 {
   padding: 20px;
   background-color: #9b59b6;
   color: white;
 }
+
 .project_name{
-  margin-top: 20px;
+  margin: 20px 10px 0px 10px;
+  display: inline-block;
+  padding: 5px;
+  /*border: 3px solid white;*/
+  vertical-align: top;
+  width: 150px
 }
+
+.status {
+  padding: 2px 10px;
+  font-size: 0.8em;
+  border-radius: 5px;
+}
+
 .todo {
-  background-color: #c0392b;
+  background-color: #e74c3c;
 }
 .doing {
   background-color: #f1c40f;
@@ -40,9 +53,12 @@ h1 {
 .done {
   background-color: #2ecc71;
 }
+
 a {
   text-decoration: none;
+  color: white;
 }
+
 a:visited {
-  color: black;
+  color: white;
 }

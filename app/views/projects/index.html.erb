@@ -6,13 +6,14 @@
 
 <ul>
   <% @projects.each do |project| %>
-  <li class="project_name"><%= project.name %>
-         <span class="<%= project.status %>"><%= project.status %></span></li>
+  <li class="project_name">
+        <%= project.name %>
+        <span class="status <%= project.status %>"><%= project.status %></span>
     <ul>
       <% project.tasks.each do |task| %>
-      <li><%= task.name %> <span class="<%= task.status %>"><%= link_to(task.status, edit_project_task_path(project.id, task.id)) %></span></li>
+      <li><%= task.name %> <span class=" status <%= task.status %>"><%= link_to(task.status, edit_project_task_path(project.id, task.id)) %></span></li>
       <% end %>
-    </ul>
+    </ul></li>
   <% end %>
 </ul>
 
