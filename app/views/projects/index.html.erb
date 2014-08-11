@@ -2,6 +2,11 @@
 
 <ul>
   <% @projects.each do |project| %>
-  <li><%= project.name %></li>
+  </br><li><%= project.name %></li>
+    <ul>
+      <% project.tasks.each do |task| %>
+      <li><%= task.name %></li>
+      <% end %>
+    </ul>
   <% end %>
 </ul>

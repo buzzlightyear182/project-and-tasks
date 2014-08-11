@@ -55,6 +55,6 @@ Rails.application.routes.draw do
   #   end
 
   resources :projects, only: [:create, :new, :index] do
-    resources :tasks, only: [:new, :create]
+    resources :tasks, only: [:new, :create, :edit, :update]
   end
 end
