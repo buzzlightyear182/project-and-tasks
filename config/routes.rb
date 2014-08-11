@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :projects, only: [:create, :new, :index] do
+    resources :tasks, only: [:new, :create]
+  end
 end

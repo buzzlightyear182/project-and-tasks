@@ -1,0 +1,9 @@
+<h1>Create a Task!</h1>
+
+<%= form_for [@project, @task] do |task| %>
+	<%= task.hidden_field :project_id %>
+	<%= task.label "Task Name" %>
+	<%= task.text_field :name %>
+	<%= task.select(:status, ["todo","doing","done"], prompt: "Status") %>
+	<%= task.submit "Create" %>
+<% end %>
