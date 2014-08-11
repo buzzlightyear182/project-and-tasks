@@ -13,3 +13,7 @@ Task.create name: "Go and buy it", project_id: 1, status: "todo"
 Task.create name: "Get some legal meds", project_id: 2, status: "todo"
 Task.create name: "Buy tissue", project_id: 2, status: "todo"
 Task.create name: "Stop sneezing", project_id: 2, status: "done"
+
+
+User.create email: "janehdee@example.com", username: "The Real Buzz Lightyear(the one on the movie)"
+User.create email: "xsimov@example.com", username: "Vakz"
