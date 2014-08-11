@@ -5,15 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Project.create name: "Getting a sim card for Jane"
-Project.create name: "Getting rid of a cold"
 
-Task.create name: "Evaluate prices", project_id: 1, status: "doing"
-Task.create name: "Go and buy it", project_id: 1, status: "todo"
-Task.create name: "Get some legal meds", project_id: 2, status: "todo"
-Task.create name: "Buy tissue", project_id: 2, status: "todo"
-Task.create name: "Stop sneezing", project_id: 2, status: "done"
+require 'pry'
 
+status = ["todo", "doing", "done"]
 
-User.create email: "janehdee@example.com", username: "The Real Buzz Lightyear(the one on the movie)"
-User.create email: "xsimov@example.com", username: "Vakz"
+(1..5).each do |user_index|
+	User.create email:"email-#{user_index}@gmail.com", username: "user0#{user_index}"
+end
+
+(1..100).each do |proj_index|
+	project = Project.create name: "Project #{proj_index}"
+
+	(1..rand(1..3)).each do
+		project.users << User.find(rand(1..5))
+	end
+
+	(1..rand(2..5)).each do |task_index|
+		Task.create name: "Task #{task_index}", status: status[rand(0..2)], project_id: project.id, user_id: project.users[rand(0..project.users.length-1)].id
+	end
+
+end
