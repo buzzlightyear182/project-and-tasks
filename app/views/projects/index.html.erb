@@ -1,12 +1,14 @@
 <h1>All projects:</h1>
-
 <ul>
   <% @projects.each do |project| %>
-  </br><li><%= project.name %></li>
+  <li class="project_name"><%= project.name %>
+  	     <span class="<%= project.status %>"><%= project.status %></span></li>
     <ul>
       <% project.tasks.each do |task| %>
-      <li><%= task.name %></li>
+      <li><%= task.name %>     <span class="<%= task.status %>"><%= link_to(task.status, edit_project_task_path(project.id, task.id)) %></span></li>
       <% end %>
     </ul>
   <% end %>
 </ul>
+
+<button id="create"><%= link_to("Create a new project", new_project_path) %></button>
