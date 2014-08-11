@@ -2,6 +2,10 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    if params[:filter] != "See all" && params[:filter].present?
+      @filter = params[:filter]
+      @projects = @projects.select {|project| project.status == params[:filter]}
+    end
   end
 
   def new
