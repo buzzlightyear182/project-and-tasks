@@ -4,6 +4,8 @@
 	<%= task.hidden_field :project_id %>
 	<%= task.label "Task Name" %>
 	<%= task.text_field :name %>
-	<%= task.select(:status, ["todo","doing","done"], prompt: "Status") %>
-	<%= task.submit "Create" %>
+  <%= task.radio_button(:status, "todo") %><%= task.label "To do" %>
+  <%= task.radio_button(:status, "doing") %><%= task.label "Doing" %>
+  <%= task.radio_button(:status, "done") %><%= task.label "Done" %>
+	<%= task.submit @form_name %>
 <% end %>

@@ -7,6 +7,7 @@ class TasksController < ApplicationController
   def new
     @project = Project.find(params[:project_id])
     @task = Task.new
+    @form_name = "Save!"
   end
 
   def create
@@ -18,6 +19,7 @@ class TasksController < ApplicationController
   def edit
     @project = Project.find(params[:project_id])
     @task = Task.find(params[:id])
+    @form_name = "Update!"
     render 'new'
   end
 
