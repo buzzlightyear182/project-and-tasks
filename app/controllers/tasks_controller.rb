@@ -15,6 +15,18 @@ class TasksController < ApplicationController
     redirect_to action: 'index', controller: 'projects'
   end
 
+  def edit
+    @project = Project.find(params[:project_id])
+    @task = Task.find(params[:id])
+    render 'new'
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.update_attributes(task_params)
+    redirect_to action: 'index', controller: 'projects'
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :status)
