@@ -1,4 +1,6 @@
-<h1>All projects</h1>
+<% content_for :title do %>
+  Project List
+<% end %>
   <%=form_tag("/projects", method: 'get') do %>
   <%= select_tag(:filter, options_for_select([["See all"],["To do", "todo"], ["Doing","doing"], ["Done", "done"]],@filter)) %>
   <%= submit_tag("Filter") %>
