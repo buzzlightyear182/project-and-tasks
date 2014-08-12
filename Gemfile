@@ -17,6 +17,8 @@ gem 'pry'
 #   gem 'therubyracer',  '~> 0.12.0'
 # end
 
+gem 'pundit'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
