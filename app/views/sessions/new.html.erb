@@ -1,0 +1,12 @@
+<h2>Log in</h2>
+
+<%= flash_alert %>
+
+<%= form_tag sessions_path %>
+<%= label_tag "Username: " %>
+<%= text_field_tag :username %>
+<%= label_tag "Password: " %>
+<%= password_field_tag :password %>
+<%= submit_tag "Log in!" %>
+
+<%= link_to "You want to sign up first?", new_user_path %>

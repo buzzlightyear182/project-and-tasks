@@ -11,7 +11,6 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'pry'
-gem 'bcrypt'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # group :production do
@@ -19,7 +18,7 @@ gem 'bcrypt'
 # end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use puma as the app server
 # gem 'puma'
