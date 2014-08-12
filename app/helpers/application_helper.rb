@@ -6,15 +6,24 @@ module ApplicationHelper
 
   def user_session(current_user)
   	if current_user
-			[content_tag(:p, "Hello #{current_user.username}"),
-				link_to("Logout", killsession_path, method: 'delete', class: "logout")]
+			["Log-out", killsession_path, 'delete']
 		else
-			[content_tag(:a, "Log-in", href: new_session_path)]
+			["Log-in", new_session_path, 'get']
 		end
+  end
 
-  	# else
-  	# 	return "<a href=\"#{new_session_path}\"><button>Log-in</button></a>".html_safe
-  	# end
+  def print_menu
+    log_item = user_session(current_user)
+    all_menu = []
+    menu_items = {}
+
+    menu_items["Create a new project"] = [new_project_path, 'GET']
+    menu_items[log_item[0]] = [log_item[1], log_item[2]]
+
+    menu_items.each do |option_string, option_path|
+      all_menu << link_to("<nav>#{option_string}</nav>".html_safe, option_path[0], class: "menu_button", method: option_path[1])
+    end
+    all_menu
   end
 
 end

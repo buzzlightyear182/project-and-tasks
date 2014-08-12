@@ -7,12 +7,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-	  <div>
-	  	<h1><%= yield(:title) || "Default title" %></h1>
-	  	<% user_session(current_user).each do |session| %>
-		  	<%= session %>
-	  	<% end %>
-  	</div>
+  	<h1><%= yield(:title) %></h1>
+    <% print_menu.each do |menu_item| %>
+      <%= menu_item %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

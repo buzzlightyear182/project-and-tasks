@@ -1,3 +1,3 @@
-<h1>Goodbye! See you soon!</h1>
+<% content_for :title, "Goodbye! See you soon!" %>
 
-<button><%= link_to "Log-in again", new_session_path %></button>
+<%= link_to "<button>Log-in again</button>".html_safe, new_session_path %>

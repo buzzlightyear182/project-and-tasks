@@ -64,17 +64,25 @@ a:visited {
   color: black;
 }
 
-#create_project{
+.menu_button{
   position: fixed;
-  top: 6rem;
   right: -2.75rem;
   width: 13rem;
   height: 1.7rem;
-  background: #7d81f5;
   border-radius: 15px;
   padding-left: 0.75rem;
 }
 
-#create_project:hover{
+.menu_button:hover{
   right: -2rem;
+}
+
+.menu_button:nth-child(2){
+  background: #7d81f5;
+  top: 6rem;
+}
+
+.menu_button:nth-child(3){
+  background: #2740c6;
+  top: 7.7rem;
 }
