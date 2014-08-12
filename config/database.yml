@@ -7,14 +7,15 @@ default: &default
 
 development:
   <<: *default
+<<<<<<< HEAD
   database: projects_and_task_app_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: projects_and_task_app
 
+  #username: projects_and_task_app
   # The password associated with the postgres role (username).
   #password:
 
@@ -41,6 +42,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+
   database: projects_and_task_app_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -64,6 +66,7 @@ test:
 #
 production:
   <<: *default
+
   database: projects_and_task_app_production
   username: projects_and_task_app
   password: <%= ENV['PROJECTS_AND_TASKS_APP_DATABASE_PASSWORD'] %>

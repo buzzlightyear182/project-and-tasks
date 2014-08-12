@@ -1,0 +1,11 @@
+= form_for(@project) do |f|
+
+  = render 'layouts/errors', model: @project
+
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+
+  .actions
+    = f.submit
