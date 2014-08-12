@@ -6,11 +6,25 @@ class UsersController < ApplicationController
 
 	def create
 		if params['user']['password'] == params['user']['password_confirmation']
-			@user = User.create	user_params
+			token = SecureRandom.urlsafe_base64(24)
+			@user = User.create	user_params.merge(confirmation_token: token)
+			UserMailer.signup_confirmation(@user).deliver
 			redirect_to action: 'index', controller: 'projects'
 		else
 			render 'new'
 		end
+	end
+
+	def confirmation
+		user = User.find_by_confirmation_token(params[:confirmation_token])
+		if user
+			user.update_attributes!(confirmation_token: nil, confirmed: true)
+			session[:user_id] = user.id
+			redirect_to action: 'index', controller: 'projects'
+		else
+			redirect_to action: 'new', controller: 'sessions'
+		end
+
 	end
 
 	private

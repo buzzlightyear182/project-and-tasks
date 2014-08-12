@@ -60,9 +60,13 @@ Rails.application.routes.draw do
   resources :projects, only: [:create, :new, :index] do
     resources :tasks, only: [:new, :create, :edit, :update]
   end
+
   resources :sessions, only: [:new, :create]
 
   delete 'killsession' => 'sessions#destroy'
 
   resources :users, only: [:new, :create]
+
+  get 'users/confirmation/:confirmation_token' => 'users#confirmation'
+
 end

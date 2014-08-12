@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_secure_password validations: false
   validates :password_digest, length: {minimum: 4}, on: :create
   validates :password_digest, confirmation: true
+  validates :confirmation_token, uniqueness: true
 
   # Regular Expression to validate emails:
   # regex = []
