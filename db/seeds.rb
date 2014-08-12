@@ -11,7 +11,7 @@ require 'pry'
 status = ["todo", "doing", "done"]
 
 (1..5).each do |user_index|
-	User.create email:"email-#{user_index}@gmail.com", username: "user0#{user_index}"
+	User.create email:"email-#{user_index}@gmail.com", username: "user0#{user_index}", password: "pwd00#{user_index}"
 end
 
 (1..100).each do |proj_index|

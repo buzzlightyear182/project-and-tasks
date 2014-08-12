@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-<<<<<<< HEAD
+
   database: projects_and_task_app_development
 
   # The specified database role being used to connect to postgres.
