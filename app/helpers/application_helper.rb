@@ -21,7 +21,7 @@ module ApplicationHelper
     menu_items[log_item[0]] = [log_item[1], log_item[2]]
 
     menu_items.each do |option_string, option_path|
-      all_menu << link_to("<nav>#{option_string}</nav>".html_safe, option_path[0], class: "menu_button", method: option_path[1])
+      all_menu << link_to(option_string, option_path[0], class: "menu_button", method: option_path[1])
     end
     all_menu
   end
