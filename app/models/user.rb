@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
 
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }, presence: true, uniqueness: true
 
+  has_secure_password validations: false
+  validates :password_digest, length: {minimum: 4}, on: :create
+  validates :password_digest, confirmation: true
+
   # Regular Expression to validate emails:
   # regex = []
   # regex << beginning_of_string = "/\A"

@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'pry'
+gem 'bcrypt'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # group :production do

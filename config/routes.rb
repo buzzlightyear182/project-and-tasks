@@ -60,4 +60,6 @@ Rails.application.routes.draw do
   resources :projects, only: [:create, :new, :index] do
     resources :tasks, only: [:new, :create, :edit, :update]
   end
+
+  resources :users, only: [:new, :create]
 end
