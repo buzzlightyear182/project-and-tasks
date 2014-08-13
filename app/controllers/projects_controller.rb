@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
-    @projects = Project.all
+    @projects = policy_scope(Project.all)
     if params[:filter] != "See all" && params[:filter].present?
       @filter = params[:filter]
       @projects = @projects.select {|project| project.status == params[:filter]}
@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    authorize @project
   end
 
   def create

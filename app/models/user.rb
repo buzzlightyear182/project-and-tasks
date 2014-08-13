@@ -33,15 +33,15 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    user.roles.include? "admin"
+    roles.include? "admin"
   end
 
   def developer?
-    user.roles.include? "developer"
+    roles.include? "developer"
   end
 
   def po?
-    user.roles.include? "po"
+    roles.include? "po"
   end
 
   # Regular Expression to validate emails:
