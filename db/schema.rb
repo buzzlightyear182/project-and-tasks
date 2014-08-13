@@ -44,9 +44,7 @@ ActiveRecord::Schema.define(version: 20140812155205) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-    t.string   "confirmation_token"
-    t.boolean  "confirmed",          default: false
-    t.string   "roles",              default: "developer"
+    t.string   "roles",           default: "developer"
   end
 
 end

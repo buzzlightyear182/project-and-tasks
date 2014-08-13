@@ -2,8 +2,7 @@
   Project List
 <% end %>
   <%=form_tag("/projects", method: 'get') do %>
-  <%= select_tag(:filter, options_for_select([["See all"],["To do", "todo"], ["Doing","doing"], ["Done", "done"]],@filter)) %>
-  <%= submit_tag("Filter") %>
+  <%= select_tag(:filter, options_for_select([["See all"],["To do", "todo"], ["Doing","doing"], ["Done", "done"]],@filter), onchange: "submit()") %>
   <% end %>
 
 <ul>
