@@ -22,6 +22,28 @@ class User < ActiveRecord::Base
     end
   end
 
+  # setter that encapsulates logic and validation for the serialized field
+  def add_role(role)
+    update_attributes!(roles: Array(roles) + Array(role.to_s.downcase))
+  end
+
+  # setter that encapsulates logic and validation for the serialized field
+  def remove_role(role)
+    update_attributes!(roles: Array(roles) - Array(role.to_s.downcase))
+  end
+
+  def admin?
+    user.roles.include? "admin"
+  end
+
+  def developer?
+    user.roles.include? "developer"
+  end
+
+  def po?
+    user.roles.include? "po"
+  end
+
   # Regular Expression to validate emails:
   # regex = []
   # regex << beginning_of_string = "/\A"
