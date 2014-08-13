@@ -15,8 +15,8 @@ module ApplicationHelper
   def print_menu
     log_item = user_session(current_user)
     all_menu = []
+    
     menu_items = {}
-
     menu_items["Create a new project"] = [new_project_path, 'GET']
     menu_items[log_item[0]] = [log_item[1], log_item[2]]
 
@@ -24,6 +24,10 @@ module ApplicationHelper
       all_menu << link_to(option_string, option_path[0], class: "menu_button", method: option_path[1])
     end
     all_menu
+  end
+
+  def greet_user
+    "You are logged in as #{current_user.username}" if current_user
   end
 
 end

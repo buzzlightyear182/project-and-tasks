@@ -10,6 +10,18 @@ class User < ActiveRecord::Base
   validates :password_digest, confirmation: true
   validates :confirmation_token, uniqueness: true
 
+  ROLES = ["admin","developer","po"]
+
+  validate :roles_validator
+  serialize :roles, Array
+
+  def roles_validator
+    roles.each do |role|
+      errors.add(:role, "#{role} is listed multiple times") unless roles.count(role) <= 1
+      errors.add(:role, "#{role} is no a valid role") unless ROLES.include? role
+    end
+  end
+
   # Regular Expression to validate emails:
   # regex = []
   # regex << beginning_of_string = "/\A"
