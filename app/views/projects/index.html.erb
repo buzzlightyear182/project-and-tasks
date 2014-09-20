@@ -1,18 +1,34 @@
 <% content_for :title do %>
   Project List
 <% end %>
+
+<hr class='divider'>
+
+<div class='dropdown'>
+  <h2>Filter by project status:</h2>
   <%=form_tag("/projects", method: 'get') do %>
   <%= select_tag(:filter, options_for_select([["See all"],["To do", "todo"], ["Doing","doing"], ["Done", "done"]],@filter), onchange: "submit()") %>
   <% end %>
-
-<ul>
+</div>
+<ul class='main_index'>
   <% @projects.each do |project| %>
   <li class="project_name">
-        <%= project.name %>
-        <span class="status <%= project.status %>"><%= project.status %></span>
+    <div class="project <%= project.status %>">
+        <i class="fa fa-chevron-circle-right"></i><h3><%= project.name %></h3>
+        <span class="text <%= project.status %>">(<em><%= project.status %>)</em></span>
+    </div>
     <ul>
       <% project.tasks.each do |task| %>
-      <li><%= task.name %> <span class=" status <%= task.status %>"><%= link_to(task.status, edit_project_task_path(project.id, task.id)) %></span></li>
+      <li class='task_text'>
+        <% if task.status == 'done' %>
+          <i class="fa fa-check-square"></i>
+        <% elsif task.status == 'doing' %>
+          <i class="fa fa-bolt"></i>
+        <% else %>
+          <i class="fa fa-times"></i>
+        <% end %>
+          <%= link_to(task.name, edit_project_task_path(project.id, task.id)) %>
+        </li>
       <% end %>
     </ul></li>
   <% end %>

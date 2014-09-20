@@ -42,3 +42,4 @@ group :development, :test do
   # Use byebug as debugger
   # gem 'byebug'
 end
+gem 'font-awesome-sass'

@@ -1,4 +1,4 @@
-<h1>Create a Task!</h1>
+<% content_for :title, "Create a Task!" %>
 
 <%= form_for [@project, @task] do |task| %>
 	<%= task.hidden_field :project_id %>

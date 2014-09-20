@@ -5,14 +5,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   </head>
   <body>
   <header>
-  	<h1><%= yield(:title) %></h1><p><%= greet_user %></p>
+  	<h1><%= yield(:title) %></h1>
+    <p><%= greet_user %></p>
   </header>
+  <div class='greeting'>
     <% print_menu.each do |menu_item| %>
       <%= menu_item %>
     <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

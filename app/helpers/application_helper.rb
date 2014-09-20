@@ -15,7 +15,7 @@ module ApplicationHelper
   def print_menu
     log_item = user_session(current_user)
     all_menu = []
-    
+
     menu_items = {}
     menu_items["Create a new project"] = [new_project_path, 'GET']
     menu_items[log_item[0]] = [log_item[1], log_item[2]]

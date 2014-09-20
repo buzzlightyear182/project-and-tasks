@@ -1,108 +1,205 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
-  box-sizing: border-box;
-  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-  background-color: #373B44;
+  background-color: #001630;
   color: white;
-  max-width: 1200px;
-  width: 80%;
-  margin: auto;
-  line-height: 1.6em;
-}
-header {
-  padding: 20px;
-  background-color: #9b59b6;
+  font-family: "Roboto", Helvetica, sans-serif; }
+
+header h1 {
+  text-align: center; }
+
+header p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  color: rgba(250, 250, 250, 0.5); }
+
+h1 {
+  font-size: 3em;
+  font-family: "Permanent Marker", cursive;
   color: white;
-}
-
-.project_name{
-  margin: 20px 10px 0px 10px;
-  display: inline-block;
-  padding: 5px;
-  /*border: 3px solid white;*/
-  vertical-align: top;
-  width: 150px
-}
-
-.status {
-  padding: 2px 10px;
-  font-size: 0.8em;
-  border-radius: 5px;
-}
-
-.todo {
-  background-color: #e74c3c;
-}
-.doing {
-  background-color: #f1c40f;
-}
-.done {
-  background-color: #2ecc71;
-}
+  text-transform: uppercase; }
 
 a {
-  text-decoration: none;
+  color: #c5eff7;
+  text-decoration: none; }
+
+ul {
+  padding: 0px; }
+
+ul.main_index {
+  margin: auto;
+  text-align: center; }
+
+li {
+  list-style: none;
+  padding: 0px; }
+
+i {
+  margin-right: 2px; }
+
+hr.divider {
+  padding: 0;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center; }
+
+hr.divider:after {
+  content: "\f044";
+  display: inline-block;
+  position: relative;
+  top: -0.5em;
+  padding: 0 0.25em;
+  font-family: FontAwesome;
+  font-size: 2em; }
+
+hr.divider {
+  border-color: white; }
+
+hr.divider:after {
   color: white;
-}
+  background-color: #001630;
+  vertical-align: middle; }
 
-a:visited {
-  color: black;
-}
+.greeting {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  text-align: right;
+  padding: 15px;
+  width: 200px; }
 
-.menu_button{
-  position: fixed;
-  right: -2.75rem;
-  width: 13rem;
-  height: 1.7rem;
-  border-radius: 15px;
-  padding-left: 0.75rem;
-}
+.greeting a {
+  padding: 10px;
+  display: inline-block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  margin: 5px; }
 
-.menu_button:hover{
-  right: -2rem;
-}
+.greeting a:hover {
+  background-color: #c5eff7;
+  color: #001630; }
 
-.menu_button:nth-child(2){
-  background: #bbbeff;
-  top: 6rem;
-}
+.alert {
+  background-color: white;
+  box-sizing: border-box;
+  margin: auto;
+  min-height: 4em;
+  padding: 2em;
+  width: 50rem; }
 
-.menu_button:nth-child(3){
-  background: #a2a4f1;
-  top: 7.7rem;
-}
+.alert-info {
+  color: green; }
 
-.menu_button:nth-child(4){
-  background: #8c8ed0;
-  top: 9.4rem;
-}
+#error_explanation {
+  background-color: red;
+  box-sizing: border-box;
+  color: white;
+  margin: auto;
+  min-height: 4em;
+  padding: 2em;
+  width: 50rem; }
 
-.menu_button:nth-child(5){
-  background: #7073a8;
-  top: 11.1rem;
-}
+.field {
+  background-color: white;
+  border: 1px dotted #ddd;
+  box-sizing: border-box;
+  margin: 2em;
+  padding: 2em; }
 
-.menu_button:nth-child(6){
-  background: #585983;
-  top: 12.5rem;
-}
+.actions {
+  background-color: white;
+  border: 1px dotted #bbb;
+  box-sizing: border-box;
+  margin: 2em;
+  padding: 2em; }
+  .actions input[type=submit] {
+    padding: 1em;
+    background: #22aaff;
+    border: 0 none;
+    border-radius: 1em;
+    color: white;
+    font-size: 1.2em; }
 
-.menu_button:nth-child(7){
-  background: #3b3c57;
-  top: 13.9rem;
-}
+.dropdown {
+  margin: auto;
+  text-align: center; }
+
+.dropdown h2, .dropdown form {
+  display: inline-block;
+  font-family: "Permanent Marker", cursive; }
+
+#filter {
+  border: 0px;
+  text-align: center;
+  -webkit-appearance: none;
+  /*Removes default chrome and safari style*/
+  -moz-appearance: none;
+  /* Removes Default Firefox style*/
+  background: #c5eff7 url(arrow_down.png) no-repeat 90% center;
+  width: 150px;
+  /*Width of select dropdown to give space for arrow image*/
+  margin: 20px;
+  color: #001630;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: 10px; }
+
+.project_name {
+  width: 20%;
+  margin: 10px;
+  height: 200px;
+  display: inline-block;
+  border: 3px solid white;
+  vertical-align: top;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px; }
+
+.project {
+  text-align: center;
+  padding: 5px 0;
+  color: #001630;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0; }
+
+.fa {
+  padding-right: 5px; }
+
+div.todo {
+  background-color: #f22613; }
+
+div.done {
+  background-color: #00b16a; }
+
+div.doing {
+  background-color: #fed136; }
+
+.project_name h3 {
+  text-transform: uppercase;
+  display: inline; }
+
+i {
+  display: inline;
+  width: 10px; }
+
+.fa-check-square {
+  color: #00b16a; }
+
+.fa-bolt {
+  color: #fed136; }
+
+.fa-times {
+  color: #f22613; }
+
+.task_text {
+  padding: 5px 10px;
+  text-align: left; }
