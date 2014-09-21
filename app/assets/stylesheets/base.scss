@@ -282,6 +282,7 @@ i {
   @include border-radius(5px);
   text-align: center;
   margin: 10px auto;
+  cursor: pointer;
 }
 
 .dropdown .save:hover {

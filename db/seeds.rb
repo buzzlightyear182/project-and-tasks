@@ -6,8 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-require 'pry'
-
 status = ["todo", "doing", "done"]
 
 (1..5).each do |user_index|

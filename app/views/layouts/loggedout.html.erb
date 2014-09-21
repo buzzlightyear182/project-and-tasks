@@ -1,3 +1,7 @@
 <% content_for :title, "Goodbye! See you soon!" %>
+<hr class='divider'>
 
-<%= link_to "<button>Log-in again</button>".html_safe, new_session_path %>
+<div class='dropdown'>
+  <%= link_to "Log-in again?", new_session_path, :class=>"save" %>
+  <!-- <button><%= link_to "Log-in again?", new_session_path, :class=>"save" %></button> -->
+</div>

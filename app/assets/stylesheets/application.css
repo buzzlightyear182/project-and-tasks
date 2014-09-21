@@ -236,7 +236,8 @@ i {
   -ms-border-radius: 5px;
   border-radius: 5px;
   text-align: center;
-  margin: 10px auto; }
+  margin: 10px auto;
+  cursor: pointer;}
 
 .dropdown .save:hover {
   background-color: white;
