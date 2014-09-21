@@ -2,7 +2,7 @@
 @import "font-awesome";
 
 body {
-  background-color: #001630;
+  background-color: #22313f;
   color: white;
   font-family: "Roboto", Helvetica, sans-serif; }
 
@@ -60,7 +60,7 @@ hr.divider {
 
 hr.divider:after {
   color: white;
-  background-color: #001630;
+  background-color: #22313f;
   vertical-align: middle; }
 
 .greeting {
@@ -83,7 +83,7 @@ hr.divider:after {
 
 .greeting a:hover {
   background-color: #c5eff7;
-  color: #001630; }
+  color: #22313f; }
 
 .alert {
   background-color: white;
@@ -145,7 +145,7 @@ hr.divider:after {
   width: 150px;
   /*Width of select dropdown to give space for arrow image*/
   margin: 20px;
-  color: #001630;
+  color: #22313f;
   font-size: 1em;
   border-radius: 5px;
   padding: 10px; }
@@ -165,7 +165,7 @@ hr.divider:after {
 .project {
   text-align: center;
   padding: 5px 0;
-  color: #001630;
+  color: #22313f;
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
   -ms-border-radius: 10px 10px 0 0;
