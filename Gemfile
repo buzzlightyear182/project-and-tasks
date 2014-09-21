@@ -11,6 +11,8 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'pry'
+gem 'rails_12factor'
+gem 'font-awesome-sass'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # group :production do
@@ -42,4 +44,3 @@ group :development, :test do
   # Use byebug as debugger
   # gem 'byebug'
 end
-gem 'font-awesome-sass'

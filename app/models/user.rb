@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   ROLES = ["admin","developer","po"]
 
-  validate :roles_validator
+  # validate :roles_validator
   serialize :roles, Array
 
   def roles_validator
