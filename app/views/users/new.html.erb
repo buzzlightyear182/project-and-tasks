@@ -1,12 +1,15 @@
 <% content_for :title, "Sign-Up!" %>
+<hr class='divider'>
 
+<div class='dropdown'>
 	<%= form_for @user do |user| %>
-		<%= user.label :username%>
+		<h2><%= user.label :username%></h2>
 		<%= user.text_field :username%>
-		<%= user.label "Password" %>
+		<h2><%= user.label "Password" %></h2>
 		<%= user.password_field :password %>
 		<%= user.password_field :password_confirmation %>
-		<%= user.label :email%>
+		<h2><%= user.label :email%></h2>
 		<%= user.text_field :email %>
-		<%= user.submit "Sign-up"%>
+		<%= user.submit "Sign-up", :class => "save" %>
 	<% end %>
+</div>

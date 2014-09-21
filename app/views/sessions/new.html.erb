@@ -1,12 +1,15 @@
 <% content_for :title, "Log in" %>
+<hr class='divider'>
 
 <%= flash_alert %>
 
+<div class='dropdown'>
 <%= form_tag sessions_path %>
-<%= label_tag "Username: " %>
+<h2><%= label_tag "Username: " %></h2>
 <%= text_field_tag :username %>
-<%= label_tag "Password: " %>
+<h2><%= label_tag "Password: " %></h2>
 <%= password_field_tag :password %>
-<%= submit_tag "Log in!" %>
+<%= submit_tag "Log in!", :class=> "save"%>
+</div>
 
-<%= link_to "You want to sign up first?", new_user_path %>
+<%= link_to "You want to sign up first?", new_user_path, :class=>"sign_up" %>
