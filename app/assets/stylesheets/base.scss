@@ -6,7 +6,7 @@ $navy: #22313F;
 $yellow: #fed136;
 $light: #C5EFF7;
 $red: #F22613;
-$salmon: white;
+$white: white;
 $green: #00B16A;
 
 //@import "font-awesome-sprockets";
@@ -40,7 +40,7 @@ header p {
 h1 {
   font-size: 3em;
   font-family: $headings;
-  color: $salmon;
+  color: $white;
   text-transform: uppercase;
 }
 
@@ -85,11 +85,11 @@ hr.divider:after {
 }
 
 hr.divider {
-  border-color: $salmon;
+  border-color: $white;
 }
 
 hr.divider:after {
-  color: $salmon;
+  color: $white;
   background-color: $navy;
   vertical-align: middle;
 }
@@ -205,10 +205,6 @@ hr.divider:after {
   @include border-radius(10px 10px 0 0);
 }
 
-.fa {
-  padding-right: 5px;
-}
-
 div.todo {
   background-color: $red;
 }
@@ -231,7 +227,11 @@ i {
   width: 10px;
 }
 
-.fa-check-square {
+.fa {
+  padding-right: 5px;
+}
+
+.fa-check-square, .fa-check {
   color: $green;
 }
 
@@ -246,4 +246,57 @@ i {
 .task_text {
   padding: 5px 10px;
   text-align: left;
+}
+
+.dropdown input {
+  display: block;
+}
+
+.dropdown input[type="text"],
+.dropdown input[type="password"] {
+  font-size: 1em;
+  padding: 5px;
+  border: 0px;
+  color: $navy;
+  width: 300px;
+}
+
+.dropdown input[type="text"]:focus,
+.dropdown input[type="password"]:focus {
+  border: 1px solid $light;
+  box-shadow: none;
+}
+
+.dropdown input[type="text"]:hover,
+.dropdown input[type="password"]:hover {
+  border: 2px solid $light;
+  box-shadow: none;
+}
+
+.dropdown .save {
+  background-color: $light;
+  color: $navy;
+  border: 0px;
+  padding: 10px;
+  font-size: 1.2em;
+  @include border-radius(5px);
+  text-align: center;
+  margin: 10px auto;
+}
+
+.dropdown .save:hover {
+  background-color: $white;
+  color: $navy;
+}
+
+.task_form input {
+  display: inline-block;
+}
+.task_label {
+  font-size: 1.5em;
+}
+
+a.sign_up {
+  text-align: center;
+  display: block;
 }

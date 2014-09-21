@@ -171,9 +171,6 @@ hr.divider:after {
   -ms-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0; }
 
-.fa {
-  padding-right: 5px; }
-
 div.todo {
   background-color: #f22613; }
 
@@ -191,7 +188,10 @@ i {
   display: inline;
   width: 10px; }
 
-.fa-check-square {
+.fa {
+  padding-right: 5px; }
+
+.fa-check-square, .fa-check {
   color: #00b16a; }
 
 .fa-bolt {
@@ -203,3 +203,51 @@ i {
 .task_text {
   padding: 5px 10px;
   text-align: left; }
+
+.dropdown input {
+  display: block; }
+
+.dropdown input[type="text"],
+.dropdown input[type="password"] {
+  font-size: 1em;
+  padding: 5px;
+  border: 0px;
+  color: #22313f;
+  width: 300px; }
+
+.dropdown input[type="text"]:focus,
+.dropdown input[type="password"]:focus {
+  border: 1px solid #c5eff7;
+  box-shadow: none; }
+
+.dropdown input[type="text"]:hover,
+.dropdown input[type="password"]:hover {
+  border: 2px solid #c5eff7;
+  box-shadow: none; }
+
+.dropdown .save {
+  background-color: #c5eff7;
+  color: #22313f;
+  border: 0px;
+  padding: 10px;
+  font-size: 1.2em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px auto; }
+
+.dropdown .save:hover {
+  background-color: white;
+  color: #22313f; }
+
+.task_form input {
+  display: inline-block; }
+
+.task_label {
+  font-size: 1.5em; }
+
+a.sign_up {
+  text-align: center;
+  display: block; }
