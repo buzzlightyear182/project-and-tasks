@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		if params['user']['password'] == params['user']['password_confirmation']
 			token = SecureRandom.urlsafe_base64(24)
 			@user = User.create	user_params.merge(confirmation_token: token)
-			UserMailer.signup_confirmation(@user).deliver
+			# UserMailer.signup_confirmation(@user).deliver
 			redirect_to action: 'index', controller: 'projects'
 		else
 			render 'new'
