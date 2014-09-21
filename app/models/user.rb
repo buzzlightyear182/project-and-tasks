@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   ROLES = ["admin","developer","po"]
 
   # validate :roles_validator
-  serialize :roles, Array
+  # serialize :roles, Array
 
   def roles_validator
     roles.each do |role|
@@ -23,14 +23,14 @@ class User < ActiveRecord::Base
   end
 
   # setter that encapsulates logic and validation for the serialized field
-  def add_role(role)
-    update_attributes!(roles: Array(roles) + Array(role.to_s.downcase))
-  end
+  # def add_role(role)
+  #   update_attributes!(roles: Array(roles) + Array(role.to_s.downcase))
+  # end
 
   # setter that encapsulates logic and validation for the serialized field
-  def remove_role(role)
-    update_attributes!(roles: Array(roles) - Array(role.to_s.downcase))
-  end
+  # def remove_role(role)
+  #   update_attributes!(roles: Array(roles) - Array(role.to_s.downcase))
+  # end
 
   def admin?
     user.roles.include? "admin"
