@@ -11,10 +11,13 @@ header h1 {
 
 header p {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10;
+  left: 20;
   margin: 20px;
   color: rgba(250, 250, 250, 0.5); }
+
+.fa-home {
+  margin: 10px; }
 
 h1 {
   font-size: 3em;
@@ -72,7 +75,7 @@ hr.divider:after {
   padding: 15px;
   width: 200px; }
 
-.greeting a {
+.greeting a, .add-task {
   padding: 10px;
   display: inline-block;
   -webkit-border-radius: 10px;
@@ -81,9 +84,19 @@ hr.divider:after {
   border-radius: 10px;
   margin: 5px; }
 
-.greeting a:hover {
+.greeting a:hover, .add-task:hover {
   background-color: #c5eff7;
   color: #22313f; }
+
+.add-task {
+  position: absolute;
+  font-weight: bold;
+  vertical-align: bottom;
+  background-color: #c5eff7;
+  color: #22313f; }
+
+.add-task:hover {
+  background-color: white; }
 
 .alert {
   background-color: white;
@@ -153,7 +166,7 @@ hr.divider:after {
 .project_name {
   width: 20%;
   margin: 10px;
-  height: 200px;
+  height: 240px;
   display: inline-block;
   border: 3px solid white;
   vertical-align: top;
@@ -166,6 +179,7 @@ hr.divider:after {
   text-align: center;
   padding: 5px 0;
   color: #22313f;
+  background-color: white;
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
   -ms-border-radius: 10px 10px 0 0;
@@ -237,7 +251,7 @@ i {
   border-radius: 5px;
   text-align: center;
   margin: 10px auto;
-  cursor: pointer;}
+  cursor: pointer; }
 
 .dropdown .save:hover {
   background-color: white;

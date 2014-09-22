@@ -1,0 +1,25 @@
+<div class='dropdown task_form'>
+<%= form_for [@project, @task] do |task| %>
+  <%= task.hidden_field :project_id %>
+  <h2><%= task.label "Task Name" %></h2>
+  <%= task.text_field :name %>
+  <ul class='status_options'>
+    <li>
+      <%= task.radio_button(:status, "done") %>
+      <i class="fa fa-check fa-2x"></i>
+      <span class='task_label fa-check'><%= task.label "Done" %></span>
+    </li>
+    <li>
+      <%= task.radio_button(:status, "doing") %>
+      <i class="fa fa-bolt fa-2x"></i>
+      <span class='task_label fa-bolt'><%= task.label "Doing" %></span>
+    </li>
+    <li>
+      <%= task.radio_button(:status, "todo") %>
+      <i class="fa fa-times fa-2x"></i>
+      <span class='task_label fa-times'><%= task.label "To do" %></span>
+    </li>
+  </ul>
+  <%= task.submit @form_name, :class => 'save' %>
+<% end %>
+</div>
