@@ -1,3 +1,4 @@
+require 'pry'
 class TasksController < ApplicationController
 
   # def index
@@ -31,7 +32,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:name, :status, :project_id)
+    params.require(:task).permit(:project_id, :name, :status)
   end
 
 end

@@ -1,6 +1,6 @@
 <div class='dropdown task_form'>
 <%= form_for [@project, @task] do |task| %>
-  <%= task.hidden_field :project_id %>
+  <%= task.hidden_field :project_id, :value => @project.id %>
   <h2><%= task.label "Task Name" %></h2>
   <%= task.text_field :name %>
   <ul class='status_options'>

@@ -7,7 +7,7 @@ validates :status,
 					message: "%{value} is not a valid status" }
   validates :name,    presence: true
   validates :project, presence: true
-  validates :user,    presence: true
+  # validates :user,    presence: true
   # validates :status,  inclusion: { in: %w(todo doing done), message: "%{value} is not a valid status" }
 
   scope :todo,  -> { where(status: "todo")  }
