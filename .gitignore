@@ -16,3 +16,8 @@ Gemfile.lock
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore SASS
+.sass-cache
+.DS_Store
+.codekit-cache

@@ -1,0 +1,257 @@
+body {
+  background-color: #22313F;
+  color: white;
+  font-family: "Roboto", Helvetica, sans-serif; }
+
+header h1 {
+  text-align: center; }
+
+header p {
+  position: absolute;
+  top: 0;
+  left: 20;
+  margin: 20px;
+  color: rgba(250, 250, 250, 0.5); }
+
+.fa-home {
+  margin: 10px; }
+
+h1 {
+  font-size: 3em;
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  text-transform: uppercase; }
+
+a {
+  color: #C5EFF7;
+  text-decoration: none; }
+
+ul {
+  padding: 0px; }
+
+ul.main_index {
+  margin: auto;
+  text-align: center; }
+
+li {
+  list-style: none;
+  padding: 0px; }
+
+i {
+  margin-right: 2px; }
+
+hr.divider {
+  padding: 0;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center; }
+
+hr.divider:after {
+  content: "\f044";
+  display: inline-block;
+  position: relative;
+  top: -0.5em;
+  padding: 0 0.25em;
+  font-family: FontAwesome;
+  font-size: 2em; }
+
+hr.divider {
+  border-color: white; }
+
+hr.divider:after {
+  color: white;
+  background-color: #22313F;
+  vertical-align: middle; }
+
+.greeting {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  text-align: right;
+  padding: 15px;
+  width: 200px; }
+
+.greeting a, .add-task {
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 5px; }
+
+.greeting a:hover, .add-task:hover {
+  background-color: #C5EFF7;
+  color: #22313F; }
+
+.add-task {
+  position: absolute;
+  font-weight: bold;
+  vertical-align: bottom;
+  background-color: #C5EFF7;
+  color: #22313F; }
+
+.add-task:hover {
+  background-color: white; }
+
+.alert {
+  background-color: white;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: auto;
+  min-height: 4em;
+  padding: 2em;
+  width: 50rem; }
+
+.alert-info {
+  color: green; }
+
+#error_explanation {
+  background-color: red;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  color: white;
+  margin: auto;
+  min-height: 4em;
+  padding: 2em;
+  width: 50rem; }
+
+.field {
+  background-color: white;
+  border: 1px dotted #ddd;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: 2em;
+  padding: 2em; }
+
+.actions {
+  background-color: white;
+  border: 1px dotted #bbb;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: 2em;
+  padding: 2em; }
+  .actions input[type=submit] {
+    padding: 1em;
+    background: #22aaff;
+    border: 0 none;
+    border-radius: 1em;
+    color: white;
+    font-size: 1.2em; }
+
+.dropdown {
+  margin: auto;
+  text-align: center; }
+
+.dropdown h2, .dropdown form {
+  display: inline-block;
+  font-family: "Permanent Marker", cursive; }
+
+#filter {
+  border: 0px;
+  text-align: center;
+  -webkit-appearance: none;
+  /*Removes default chrome and safari style*/
+  -moz-appearance: none;
+  /* Removes Default Firefox style*/
+  background: #C5EFF7 url(arrow_down.png) no-repeat 90% center;
+  width: 150px;
+  /*Width of select dropdown to give space for arrow image*/
+  margin: 20px;
+  color: #22313F;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: 10px; }
+
+.project_name {
+  width: 20%;
+  margin: 10px;
+  height: 240px;
+  display: inline-block;
+  border: 3px solid white;
+  vertical-align: top;
+  border-radius: 15px; }
+
+.project {
+  text-align: center;
+  padding: 5px 0;
+  color: #22313F;
+  background-color: white;
+  border-radius: 10px 10px 0 0; }
+
+div.todo {
+  background-color: #F22613; }
+
+div.done {
+  background-color: #00B16A; }
+
+div.doing {
+  background-color: #fed136; }
+
+.project_name h3 {
+  text-transform: uppercase;
+  display: inline; }
+
+i {
+  display: inline;
+  width: 10px; }
+
+.fa {
+  padding-right: 5px; }
+
+.fa-check-square, .fa-check {
+  color: #00B16A; }
+
+.fa-bolt {
+  color: #fed136; }
+
+.fa-times {
+  color: #F22613; }
+
+.task_text {
+  padding: 5px 10px;
+  text-align: left; }
+
+.dropdown input {
+  display: block; }
+
+.dropdown input[type="text"],
+.dropdown input[type="password"] {
+  font-size: 1em;
+  padding: 5px;
+  border: 0px;
+  color: #22313F;
+  width: 300px; }
+
+.dropdown input[type="text"]:focus,
+.dropdown input[type="password"]:focus {
+  border: 1px solid #C5EFF7;
+  box-shadow: none; }
+
+.dropdown input[type="text"]:hover,
+.dropdown input[type="password"]:hover {
+  border: 2px solid #C5EFF7;
+  box-shadow: none; }
+
+.dropdown .save {
+  background-color: #C5EFF7;
+  color: #22313F;
+  border: 0px;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px auto;
+  cursor: pointer; }
+
+.dropdown .save:hover {
+  background-color: white;
+  color: #22313F; }
+
+.task_form input {
+  display: inline-block; }
+
+.task_label {
+  font-size: 1.5em; }
+
+a.sign_up {
+  text-align: center;
+  display: block; }
